@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO-Connect</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #065f46;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    section.hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e8f5e9;
+    }
+
+    section.hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    section.hero p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    section.about {
+      display: flex;
+      gap: 20px;
+      padding: 50px 20px;
+    }
+
+    section.about .image {
+      flex: 1;
+    }
+
+    section.about .image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    section.about .content {
+      flex: 2;
+    }
+
+    section.about .content h2 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    section.about .content p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    section.about .content .quote {
+      text-align: center;
+      font-style: italic;
+      font-size: 18px;
+      color: #777;
+    }
+
+    section.programs {
+      position: relative;
+      padding: 50px 20px;
+      background-color: #f1f8e9;
+    }
+
+    section.programs h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-image {
+      min-width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .carousel-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      background-color: rgba(0, 0, 0, 0.5); /* Slight dark background for readability */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .donation-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 30px;
+      gap: 40px;
+    }
+
+    .donation-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .donation-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .donation-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .donation-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .donation-card button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .donation-card button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #4caf50;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .catchy-text {
+      font-size: 22px;
+      font-weight: bold;
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+
+
+
+    section.hero {
+  position: relative;
+  height: 400px; /* Adjust height as needed */
+  background-image: url('imgback.png'); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ddd; /* Light gray for better contrast */
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">NGO-Connect</div>
+    <nav>
+      <a href="#about">About-Us</a>
+      <a href="#programs">Programs</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#login">Login</a>
+      <a href="#signup">SignUp</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Lives, One Step at a Time</h1>
+      <p>Join hands with us to create a better tomorrow for everyone.</p>
+    </div>
+  </section>
+  
+
+  <section id="about" class="about">
+    <div class="image">
+      <img src="ngologo.jpg" alt="Community Support">
+    </div>
+    <div class="content">
+      <h2>Vision</h2>
+      <p>Our vision is to create a world where every individual, irrespective of their background, has equal access to resources, opportunities, and a better quality of life. We strive to foster a community of empowerment, where kindness and collaboration drive change for a brighter future.</p>
+      <h2>Mission</h2>
+      <p>Our mission is to connect NGOs with individuals and organizations willing to support impactful causes. By bridging the gap between resources and needs, we aim to provide sustainable solutions for education, healthcare, disaster relief, and environmental conservation. Together, we can make a lasting difference.</p>
+      <div class="quote">"Together, we can make a difference."</div>
+    </div>
+  </section>
+
+  <section id="programs" class="programs">
+    <h2>Our Programs</h2>
+    <div class="carousel">
+      <div class="carousel-images">
+        <div class="carousel-image" style="background-image: url('empedu.jpg');">
+          <div class="carousel-content">Education Empowerment Program</div>
+        </div>
+        <div class="carousel-image" style="background-image: url('healthcare-1.png');">
+          <div class="carousel-content">Healthcare Access for All</div>
+        </div>
+        <div class="carousel-image" style="background-image: url('program3.jpg');">
+          <div class="carousel-content">Disaster Relief Operations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="donate" class="donate">
+    <h2 style="text-align: center;">Donate</h2>
+    <div class="donation-cards">
+      <div class="donation-card">
+        <img src="edu.jpg" alt="Education for All">
+        <h3>Education for All</h3>
+        <p>Help provide education to underprivileged children.</p>
+        <button>Donate Now</button>
+      </div>
+      <div class="donation-card">
+        <img src="health.jpg" alt="Healthcare for Families">
+        <h3>Healthcare for Families</h3>
+        <p>Support medical care for families in need.</p>
+        <button>Donate Now</button>
+      </div>
+      <div class="donation-card">
+        <img src="feed_hungry.jpg" alt="Feeding the Hungry">
+        <h3>Feeding the Hungry</h3>
+        <p>Provide meals to those who need them the most.</p>
+        <button>Donate Now</button>
+      </div>
+      <div class="donation-card">
+        <img src="shelter.jpg" alt="Shelter for Homeless">
+        <h3>Shelter for Homeless</h3>
+        <p>Help provide safe housing for the homeless.</p>
+        <button>Donate Now</button>
+      </div>
+      <div class="donation-card">
+        <img src="women.jpg" alt="Empowering Women">
+        <h3>Empowering Women</h3>
+        <p>Support initiatives to empower women and girls.</p>
+        <button>Donate Now</button>
+      </div>
+      <div class="donation-card">
+        <img src="edu.jpg" alt="Education for All">
+        <h3>Education for All</h3>
+        <p>Help provide education to underprivileged children.</p>
+        <button>Donate Now</button>
+      </div>
+      <div class="donation-card">
+        <img src="health.jpg" alt="Healthcare for Families">
+        <h3>Healthcare for Families</h3>
+        <p>Support medical care for families in need.</p>
+        <button>Donate Now</button>
+      </div>
+      <div class="donation-card">
+        <img src="feed_hungry.jpg" alt="Feeding the Hungry">
+        <h3>Feeding the Hungry</h3>
+        <p>Provide meals to those who need them the most.</p>
+        <button>Donate Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="catchy-text">Be the Change You Wish to See in the World</div>
+    <p>&copy; 2024 NGO-Connect | <a href="#contact">Contact Us</a></p>
+    <p>Follow us on:</p>
+    <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-image');
+    const totalImages = images.length;
+
+    function changeSlide() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      document.querySelector('.carousel-images').style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(changeSlide, 5000); // Change slide every 5 seconds
+  </script>
+</body>
+</html>
